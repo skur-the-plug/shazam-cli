@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shazam-pipewire-cli"
+version = "0.1.0"
+description = "Identify music from your Linux terminal with one command."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Anas Houhou", email = "skur-the-plug@users.noreply.github.com" }]
+keywords = ["shazam", "music", "recognition", "pipewire", "linux", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+dependencies = ["shazamio==0.9.0"]
+
+[project.urls]
+Homepage = "https://github.com/skur-the-plug/shazam-cli"
+Issues = "https://github.com/skur-the-plug/shazam-cli/issues"
+Repository = "https://github.com/skur-the-plug/shazam-cli.git"
+
+[project.scripts]
+shazam = "shazam_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
